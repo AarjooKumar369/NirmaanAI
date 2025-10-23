@@ -40,7 +40,7 @@ const Home = () => {
 
   // ⚠️ API Key (you said you want it inside the file)
   const ai = new GoogleGenAI({
-    apiKey: "YOUR_API_KEY"
+    apiKey: import.meta.env.VITE_GEMINI_API_KEY
   });
 
   // ✅ Generate code
@@ -83,7 +83,7 @@ Requirements:
     if (!code.trim()) return toast.error("No code to copy");
     try {
       await navigator.clipboard.writeText(code);
-      toast.success("Code copied to clipboard");
+      toast.success("Code copied!");
     } catch (err) {
       console.error('Failed to copy: ', err);
       toast.error("Failed to copy");
@@ -94,7 +94,7 @@ Requirements:
   const downnloadFile = () => {
     if (!code.trim()) return toast.error("No code to download");
 
-    const fileName = "GenUI-Code.html"
+    const fileName = "NirmaanAI-Code.html"
     const blob = new Blob([code], { type: 'text/plain' });
     let url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -113,8 +113,8 @@ Requirements:
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 lg:px-16">
         {/* Left Section */}
         <div className="w-full py-6 rounded-xl bg-[#141319] mt-5 p-5">
-          <h3 className='text-[25px] font-semibold sp-text'>AI Component Generator</h3>
-          <p className='text-gray-400 mt-2 text-[16px]'>Describe your component and let AI code it for you.</p>
+          <h3 className='text-[25px] font-semibold sp-text'>Welcome to NirmaanAI</h3>
+          <p className='text-gray-400 mt-2 text-[16px]'>Build stunning UI components with NirmaanAI</p>
 
           <p className='text-[15px] font-[700] mt-4'>Framework</p>
           <Select

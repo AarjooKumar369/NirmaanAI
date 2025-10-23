@@ -1,12 +1,71 @@
-# React + Vite
+# NirmaanAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NirmaanAI is an **AI-powered component generator** built using the **Google Gemini API**.  
+It allows developers to **quickly generate responsive UI components** with AI assistance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- Generate React UI components automatically
+- Responsive design with Tailwind CSS
+- Integration with Google Gemini AI API
+- Interactive editor powered by Monaco Editor
+- Copy, export, and open components in a new tab
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💻 Setup & Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/AarjooKumar369/NirmaanAI.git
+cd NirmaanAI
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Add your Gemini API key**  
+Create a `.env` file in the root folder:
+```bash
+VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
+```
+
+4. **Run the development server**
+```bash
+npm run dev
+```
+
+5. Open the browser at the URL shown in the terminal (usually `http://localhost:5173`).
+
+---
+
+## 🛠️ Usage
+
+- Use the **AI component generator** on the home page
+- Customize components via the editor
+- Copy or export generated components easily
+
+---
+
+## 💾 Project Structure
+
+```
+src/
+ ├─ components/   # Navbar, buttons, reusable UI components
+ ├─ pages/        # Home page & main logic
+ ├─ assets/       # Images, logos
+ └─ App.jsx       # Main React app entry
+```
+
+---
+
+## ⚡ Notes
+
+- Make sure `.env` file is **not committed** to GitHub (add to `.gitignore`)
+- Tailwind CSS is used for styling — feel free to customize colors and animations
+- Monaco Editor powers the interactive code editing experience
+
